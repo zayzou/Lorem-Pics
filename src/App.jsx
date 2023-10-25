@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "./data";
+import { nanoid } from "nanoid";
 const App = () => {
   const [count, setCount] = useState(1);
   const [text, setText] = useState([]);
@@ -32,6 +33,11 @@ const App = () => {
           Generate
         </button>
       </form>
+      <article className="lorem-text">
+        {text.map((paragraph) => {
+          return <p key={nanoid()}>{paragraph}</p>;
+        })}
+      </article>
     </section>
   );
 };
