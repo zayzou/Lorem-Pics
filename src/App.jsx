@@ -1,8 +1,10 @@
 import { useState } from "react";
-
+import text from "./data";
 const App = () => {
   const [count, setCount] = useState(1);
+  const [data, setData] = useState([]);
   const handleChange = (e) => setCount(e.target.value);
+  
   return (
     <section className="section-center">
       <h4>Bored of classic lorem ipsum ? </h4>
