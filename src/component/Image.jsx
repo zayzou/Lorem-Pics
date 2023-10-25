@@ -5,7 +5,7 @@ export function Image() {
   const [img, setImage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newUrl = option === "standard" ? `${url}?random=1` : `${url}?${option}?random=1`;
+    const newUrl = option === "standard" ? url : `${url}?${option}`;
     console.log("fetching image from " + newUrl);
     setImage(newUrl);
   };
