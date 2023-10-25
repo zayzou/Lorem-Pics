@@ -293,3 +293,17 @@ ul {
   line-height: 2;
   margin-bottom: 2rem;
 }
+
+
+/* by Zayzou */
+
+.lorem-text{
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lorem-text:hover {
+  background-color: var(--primary-100); /* Change to your desired hover background color */
+  color:  var(--grey-900); /* Change to your desired hover text color */
+}

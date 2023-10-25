@@ -13,6 +13,11 @@ const App = () => {
     }
     setText(data.slice(0, count));
   };
+
+  const handleClick = () => {
+    navigator.clipboard.writeText(text);
+    alert("copied to clipboard");
+  };
   return (
     <section className="section-center">
       <h4>Bored of classic lorem ipsum ? </h4>
@@ -33,7 +38,7 @@ const App = () => {
           Generate
         </button>
       </form>
-      <article className="lorem-text">
+      <article className="lorem-text" onClick={handleClick}>
         {text.map((paragraph) => {
           return <p key={nanoid()}>{paragraph}</p>;
         })}
