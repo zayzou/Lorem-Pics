@@ -19,7 +19,8 @@ const App = () => {
     alert("copied to clipboard");
   };
   return (
-    <section className="section-center">
+   <div className="section-center" >
+     <section >
       <h4>Bored of classic lorem ipsum ? </h4>
       <form className="lorem-form" onSubmit={handleSubmit}>
         <label htmlFor="amount"></label>
@@ -44,6 +45,32 @@ const App = () => {
         })}
       </article>
     </section>
+    <section >
+      <h4>Bored of classic lorem ipsum ? </h4>
+      <form className="lorem-form" onSubmit={handleSubmit}>
+        <label htmlFor="amount"></label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          className=""
+          value={count}
+          step="1"
+          min="1"
+          max="8"
+          onChange={handleChange}
+        />
+        <button type="submit" className="btn">
+          Generate
+        </button>
+      </form>
+      <article className="lorem-text" onClick={handleClick}>
+        {text.map((paragraph) => {
+          return <p key={nanoid()}>{paragraph}</p>;
+        })}
+      </article>
+    </section>
+   </div>
   );
 };
 export default App;
