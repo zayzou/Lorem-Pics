@@ -261,6 +261,9 @@ ul {
   max-width: 80rem;
   margin: 10rem auto;
 }
+.section-center section{
+  width: 100%
+}
 .section-center h4 {
   text-transform: uppercase;
   text-align: center;

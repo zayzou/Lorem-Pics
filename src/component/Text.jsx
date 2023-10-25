@@ -19,7 +19,7 @@ export function Text() {
   };
   return (
     <section>
-      <h4>Bored of classic lorem ipsum ? </h4>
+      <h4>Classic lorem ipsum </h4>
       <form className="lorem-form" onSubmit={handleSubmit}>
         <label htmlFor="amount"></label>
         <input

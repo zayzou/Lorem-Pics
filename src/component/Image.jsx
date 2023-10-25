@@ -1,16 +1,24 @@
 import { useState } from "react";
-import defaultJpg from "../../public/default.jpg";
 export function Image() {
-  const [options, setOptions] = useState("standard");
+  const url = "https://picsum.photos/1200/800";
+  const [option, setOptions] = useState("standard");
+  const [img, setImage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(submit);
+    const newUrl = option === "standard" ? `${url}?random=1` : `${url}?${option}?random=1`;
+    console.log("fetching image from " + newUrl);
+    setImage(newUrl);
+  };
+
+  const handleOptionChange = (e) => {
+    console.log(e.target.value);
+    setOptions(e.target.value);
   };
   return (
     <section>
-      <h4>more than just traditional image placeholders</h4>
+      <h4>Cool image placeholders</h4>
       <form className="lorem-form" onSubmit={handleSubmit}>
-        <select name="" id="">
+        <select value={option} onChange={handleOptionChange}>
           <option>standard</option>
           <option>grayscale</option>
           <option>blur</option>
@@ -20,7 +28,9 @@ export function Image() {
         </button>
       </form>
       <article className="lorem-image">
-        <img src={defaultJpg} alt="" />
+        <a href={img} target="blank">
+          <img src={img} alt="" />
+        </a>
       </article>
     </section>
   );
