@@ -279,9 +279,10 @@ ul {
   font-size: 1.25rem;
 }
 
-.lorem-form input {
+.lorem-form input,
+.lorem-form select {
   padding: 0.25rem 0.5rem;
-  width: 4rem;
+  width: 7rem;
   border-radius: var(--borderRadius);
   border-color: transparent;
   background: var(--grey-300);
@@ -310,4 +311,15 @@ ul {
     --primary-100
   ); /* Change to your desired hover background color */
   color: var(--grey-900); /* Change to your desired hover text color */
+}
+
+.lorem-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lorem-image img {
+  height: 250px;
+  margin: auto;
 }
